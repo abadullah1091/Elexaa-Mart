@@ -1,5 +1,6 @@
 package com.example.elexaamart.views.starter
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,24 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.elexaamart.R
+import com.example.elexaamart.base.BaseFragment
 import com.example.elexaamart.databinding.FragmentStartBinding
+import com.example.elexaamart.views.dashboard.seller.sellerdashboard
+import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
-class StartFragment : Fragment() {
+@AndroidEntryPoint
+class StartFragment : BaseFragment<FragmentStartBinding>(FragmentStartBinding::inflate) {
 
-    lateinit var binding: FragmentStartBinding
+   override fun setListner() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentStartBinding.inflate(inflater, container, false)
-
-        setListner()
-        return binding.root
-    }
-
-    private fun setListner() {
+       setUpAutoLogin()
 
         with(binding){
             btnLogin.setOnClickListener {
@@ -36,6 +31,19 @@ class StartFragment : Fragment() {
 
             }
         }
+
+    }
+
+    private fun setUpAutoLogin() {
+        FirebaseAuth.getInstance().currentUser?.let {
+
+            startActivity(Intent(requireContext(), sellerdashboard::class.java))
+            requireActivity().finish()
+        }
+
+    }
+
+    override fun allObserber() {
 
     }
 

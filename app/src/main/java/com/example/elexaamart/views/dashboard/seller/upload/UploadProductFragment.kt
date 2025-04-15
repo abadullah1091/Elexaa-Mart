@@ -1,13 +1,14 @@
-package com.example.elexaamart
+package com.example.elexaamart.views.dashboard.seller.upload
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.elexaamart.R
 
 
-class DashBoardFragment : Fragment() {
+class UploadProductFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,6 +16,7 @@ class DashBoardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dash_board, container, false)
+        return inflater.inflate(R.layout.fragment_upload_product, container, false)
     }
+
 }
