@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -73,5 +74,14 @@ dependencies {
 
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    //ImagePicker
+
+    implementation (libs.imagepicker)
+
+
+    implementation(libs.activity.ktx)
+    implementation(libs.fragment.ktx)
+
 
 }

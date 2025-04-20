@@ -21,6 +21,10 @@ navigationFragmentKtx = "2.8.9"
 navigationUiKtx = "2.8.9"
 lotie = "6.6.0"
 hilt = "2.51.1"
+imagepicker = "2.1"
+activity-ktx = "1.10.1"
+fragment-ktx = "1.8.6"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,9 +44,17 @@ firebase-inappmessaging-display = { group = "com.google.firebase", name = "fireb
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+
+
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lotie" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+imagepicker = { group = "com.github.dhaval2404", name = "imagepicker", version.ref = "imagepicker" }
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity-ktx" }
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx" }
+
+
+
 
 
 [plugins]
